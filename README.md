@@ -10,10 +10,16 @@ Features:
 
 ## How to use this repo:
 
-You can run project locally. Please make sure to insert you `API_KEY` for https://libraries.io/ and run this command:
+1. You can run project locally. Please make sure to use you `API_KEY` for https://libraries.io/ in file: `yet-another-repository-search-tool/src/constants.ts`. After that run this command:
 
 ```
 yarn start
 ```
 
 A browser will show up and display the web app.
+
+2. To run tests for the web app run this command:
+
+```
+yarn test
+```

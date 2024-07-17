@@ -34,7 +34,6 @@ export const useFetch = <T,>(url: string, options?: RequestInit) => {
           setError({ message: err.message, name: err.name });
         }
       } finally {
-        // Ensure loading is only set to false if the current request is the same as the one being aborted
         if (abortControllerRef.current === controller) {
           setLoading(false);
         }
@@ -44,7 +43,6 @@ export const useFetch = <T,>(url: string, options?: RequestInit) => {
     if (url) {
       fetchData();
     } else {
-      // Handle case when the URL is empty
       setLoading(false);
       setData(null);
       setError(null);
